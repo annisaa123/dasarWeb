@@ -20,7 +20,7 @@ while ($jarakSaatIni < $jarakTarget) {
     $jarakSaatIni += $peningkatanHarian;
     $hari++;
 }
-echo "Atlet tersebut memerlukan $hari untuk mencapai jarak 500 kilometer.";
+echo "<br>Atlet tersebut memerlukan $hari untuk mencapai jarak 500 kilometer.";
 
 $jumlahLahan = 10;
 $tanamanPerLahan = 5;
@@ -50,4 +50,33 @@ foreach ($skorUjian as $skor) {
 
 $nilaiSiswa = [85, 92, 58, 64, 90, 55, 88, 79, 70, 96];
 
-?>
+foreach ($nilaiSiswa as $nilai) {
+    if ($nilai < 60) {
+        echo "Nilai: $nilai (Tidak lulus) <br>";
+        continue;
+    }
+    echo "Nilai: $nilai (Lulus) <br>";
+}
+
+echo "<br>";
+$hargaProduk = 120000;
+$diskon = 20;
+if ($hargaProduk > 100000) {
+    $jumlahDiskon = ($hargaProduk * $diskon) / 100;
+    $hargaSetelahDiskon = $hargaProduk - $jumlahDiskon;
+    echo "Harga produk: Rp " . number_format($hargaProduk, 0, ',', '.') . "<br>";
+    echo "Diskon: {$diskon}%<br>";
+    echo "Jumlah diskon: Rp " . number_format($jumlahDiskon, 0, ',', '.') . "<br>";
+    echo "Harga yang harus dibayar setelah diskon: Rp " . number_format($hargaSetelahDiskon, 0, ',', '.') . "<br>";
+} else {
+    echo "Harga produk tidak memenuhi syarat diskon.<br>";
+    echo "Harga yang harus dibayar: Rp " . number_format($hargaProduk, 0, ',', '.') . "<br>";
+}
+
+ // Perhitungan Skor Game
+ $totalPoin = 550; // Ganti dengan skor pemain aktual
+ $hadiahTambahan = $totalPoin > 500 ? "YA" : "TIDAK";
+
+ echo "<p>Total skor pemain adalah: $totalPoin</p>";
+ echo "<p>Apakah pemain mendapatkan hadiah tambahan? $hadiahTambahan</p>";
+ ?>
