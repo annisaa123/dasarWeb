@@ -8,7 +8,6 @@ $benar = true;
 $salah = false;
 echo "Variabel benar: $benar, Variabel salah: $salah.<br>";
 
-// Mendefinisikan konstanta untuk nilai tetap
 define("NAMA_SITUS", "Websiteku.com");
 define("TAHUN_PENDIRIAN", 2023);
 

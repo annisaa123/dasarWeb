@@ -21,12 +21,7 @@ while ($jarakSaatIni < $jarakTarget) {
     $hari++;
 }
 echo "<br>Atlet tersebut memerlukan $hari untuk mencapai jarak 500 kilometer.";
-
-$jumlahLahan = 10;
-$tanamanPerLahan = 5;
-$buahPerTanaman = 10;
-$jumlahBuah = 0;
-
+echo "<br><br>";
 
 $jumlahLahan = 10;
 $tanamanPerLahan = 5;
@@ -39,6 +34,7 @@ for ($i = 1; $i <= $jumlahLahan; $i++) {
 }
 
 echo "Jumlah buah yang akan dipanen dari $jumlahLahan lahan dengan masing-masing lahan memiliki $tanamanPerLahan tanaman dan setiap tanaman menghasilkan $buahPerTanaman buah adalah: $jumlahBuah";
+echo "<br><br>";
 
 $skorUjian = [85, 92, 78, 96, 88];
 $totalSkor = 0;
