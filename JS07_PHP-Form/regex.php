@@ -17,12 +17,12 @@ $new_text = preg_replace($pattern, $replacement, $text);
 
 echo $new_text . "<br>"; // Output: "I like banana pie."
 
-// Mencocokkan variasi kata "good" dengan menggunakan ?
-$pattern = '/go?od/'; // Cocokkan "god" atau "good"
-$text = 'god is good.';
+// Mencocokkan variasi kata "good" dengan menggunakan {n,m}
+$pattern = '/go{2,4}d/'; // Cocokkan "god", "good", atau "goood"
+$text = 'god is good. goood is also matched.';
 if (preg_match($pattern, $text, $matches)) {
-    echo "Cocokkan: " . $matches[0];
+    echo "Cocokkan: " . $matches[0] . "<br>";
 } else {
-    echo 'Tidak ada yang cocok!';
+    echo 'Tidak ada yang cocok!<br>';
 }
 ?>
