@@ -17,8 +17,8 @@ $new_text = preg_replace($pattern, $replacement, $text);
 
 echo $new_text . "<br>"; // Output: "I like banana pie."
 
-// Mencocokkan variasi kata "good"
-$pattern = '/go*d/'; // Cocokkan "god", "good", "goood", dll.
+// Mencocokkan variasi kata "good" dengan menggunakan ?
+$pattern = '/go?od/'; // Cocokkan "god" atau "good"
 $text = 'god is good.';
 if (preg_match($pattern, $text, $matches)) {
     echo "Cocokkan: " . $matches[0];
