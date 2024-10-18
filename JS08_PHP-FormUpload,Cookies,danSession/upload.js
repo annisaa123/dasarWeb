@@ -1,20 +1,19 @@
-$(document). ready(function(){
-    $("#submit").click(function(){
+$(document).ready(function(){
+    $('#upload-form').submit(function(e){
         e.preventDefault();
-
+        var formData = new FormData(this);
         $.ajax({
             type: 'POST',
             url: 'upload_ajax.php',
             data: formData,
-            contentType: false,
             cache: false,
             contentType: false,
             processData: false,
             success: function(response){
-                $("#status").html(response);
+                $('#status').html(response);
             },
             error: function(){
-                $("#status").html('Terjadi kesalahan saat mengunggah file.');
+                $('#status').html('Terjadi kesalahan saat mengunggah file.');
             }
         });
     });
