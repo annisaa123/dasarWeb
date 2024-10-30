@@ -18,5 +18,8 @@ if (isset($_POST["submit"])){
     }else{
         echo "File tidak valid atau melebihi ukuran maksimum yang diizinkan.";
     }
+
+    //menampilkan thumbnail gambar dengan lebar 200px
+    echo "<img src='$targetfile' width='200px' style='height: auto;' alt='Thumbnail'>";
 }
 ?>
